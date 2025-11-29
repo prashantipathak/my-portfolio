@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasanti Pathak Portfolio</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar">
+            <video autoplay muted loop id="video-background">
+                <source src="images/ocean.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="logo">Prasanti Pathak</span>
+            <ul class="nav-links">
+                <li><a href="#About">About</a></li>
+                <li><a href="#Projects">Projects</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="About">
+            <h2>About Me</h2>
+            <p>Hi! I’m Prasanti Pathak. I am currently pursuing a Bachelor's in Cyber Security. I’m passionate about learning new things and discovering how different ideas and technologies work. I enjoy reading, traveling, and writing.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="Skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Cybersecurity Basics</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="Projects">
+            <h2>Projects</h2>
+            <div id="projects-grid">
+                <div class="project-card">
+                    <img src="images/weather app.png" alt="Weather App Screenshot">
+                    <h3>Weather App</h3>
+                    <p>A simple weather app fetching real-time data.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/movieapp.png" alt="Movie Info Website Screenshot">
+                    <h3>Movie Info Website</h3>
+                    <p>Search for movies and get details like ratings, synopsis, and cast.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/todo.png" alt="To-Do List Website Screenshot">
+                    <h3>To-Do List Website</h3>
+                    <p>A simple interactive to-do list to manage daily tasks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="Contact">
+            <h2>Contact</h2>
+            <div>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="eg: xyz@gmail.com" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Enter your message here" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="form-message"></div>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 All rights belong to Prasanti.</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
