@@ -12,22 +12,26 @@ body {
     color: #333;
 }
 
-/* --- Navbar with Video Background --- */
-.navbar {
+/* --- Scroll Progress Bar --- */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background: #ff8c7e;
+    z-index: 9999;
+}
+
+/* --- HERO SECTION --- */
+#hero {
     position: relative;
+    height: 350px;
     display: flex;
-    flex-direction: column; /* logo on top, links below */
-    justify-content: center; /* vertical centering */
-    align-items: center;     /* horizontal centering */
-    padding: 20px 0;
-    margin: 20px auto;       /* space from top */
-    height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    z-index: 1;
-    border-radius: 15px;
-    background: rgba(0,0,0,0.3);
-    text-align: center;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
 /* Video background */
@@ -38,8 +42,17 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1; /* behind content */
-    border-radius: 15px;
+    z-index: -1;
+}
+
+/* --- Navbar --- */
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 20px;
 }
 
 /* Portfolio title */
@@ -47,21 +60,19 @@ body {
     color: white;
     font-weight: 700;
     font-size: 2rem;
-    text-align: center;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-    margin-bottom: 15px;
-    z-index: 2;
 }
 
-/* Navigation links */
+/* --- Navigation links --- */
 .nav-links {
     list-style: none;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 2;
+    flex-direction: column; /* mobile default */
+    display: none;          /* hidden until JS opens it */
+    gap: 20px;
+}
+
+.nav-links.open {
+    display: flex; /* shown when JS toggles */
 }
 
 .nav-links li a {
@@ -93,6 +104,40 @@ body {
 .nav-links li a:hover {
     color: #ff8c7e;
     transform: scale(1.05);
+}
+
+/* --- Mobile Menu Button --- */
+.menu-toggle {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid white;
+    color: white;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* --- Hero text --- */
+.hero-content {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 
 /* --- Sections --- */
@@ -225,29 +270,26 @@ footer {
 }
 
 /* --- Responsive Media Queries --- */
-@media screen and (max-width: 767px) {
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-    }
 
-    .navbar {
-        height: 220px;
-        margin-top: 15px;
-        margin-bottom: 30px;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-}
-
+/* Tablet */
 @media screen and (min-width: 768px) {
     .navbar {
-        height: 300px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    .nav-links {
+        display: flex; /* always visible on tablets+ */
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 }
 
+/* Desktop */
 @media screen and (min-width: 1024px) {
     section {
         padding: 50px 40px;

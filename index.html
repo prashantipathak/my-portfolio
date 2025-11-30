@@ -4,37 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasanti Pathak Portfolio</title>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navbar -->
-    <header>
+
+    <!-- Scroll Progress Bar (Optional but Recommended) -->
+    <div id="scroll-progress"></div>
+
+    <!-- HERO HEADER WITH VIDEO BACKGROUND -->
+    <header id="hero">
+
+        <!-- Background Video -->
+        <video autoplay muted loop id="video-background">
+            <source src="images/ocean.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- NAVIGATION -->
         <nav class="navbar">
-            <video autoplay muted loop id="video-background">
-                <source src="images/ocean.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
             <span class="logo">Prasanti Pathak</span>
+
             <ul class="nav-links">
-                <li><a href="#About">About</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Skills">Skills</a></li>
-                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+                ☰
+            </button>
         </nav>
+
+        <div class="hero-content">
+            <h1>Prasanti Pathak</h1>
+            <p>Cyber Security Student | Frontend Enthusiast</p>
+        </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- MAIN CONTENT -->
     <main>
-        <!-- About Section -->
-        <section id="About">
+
+        <!-- ABOUT SECTION -->
+        <section id="about">
             <h2>About Me</h2>
-            <p>Hi! I’m Prasanti Pathak. I am currently pursuing a Bachelor's in Cyber Security. I’m passionate about learning new things and discovering how different ideas and technologies work. I enjoy reading, traveling, and writing.</p>
+            <p>Hi! I’m Prasanti Pathak. I am currently pursuing a Bachelor's in Cyber Security. 
+            I’m passionate about learning new things and exploring how different ideas and technologies work. 
+            I enjoy reading, traveling, and writing.</p>
         </section>
 
-        <!-- Skills Section -->
-        <section id="Skills">
+        <!-- SKILLS SECTION -->
+        <section id="skills">
             <h2>Skills</h2>
+
             <div class="skills-container">
                 <div class="skill">HTML</div>
                 <div class="skill">CSS</div>
@@ -43,57 +67,57 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="Projects">
+        <!-- PROJECTS SECTION (GRID REQUIRED) -->
+        <section id="projects">
             <h2>Projects</h2>
+
             <div id="projects-grid">
                 <div class="project-card">
                     <img src="images/weather app.png" alt="Weather App Screenshot">
                     <h3>Weather App</h3>
                     <p>A simple weather app fetching real-time data.</p>
                 </div>
+
                 <div class="project-card">
                     <img src="images/movieapp.png" alt="Movie Info Website Screenshot">
                     <h3>Movie Info Website</h3>
-                    <p>Search for movies and get details like ratings, synopsis, and cast.</p>
+                    <p>Find movie ratings, synopsis, and cast details.</p>
                 </div>
+
                 <div class="project-card">
-                    <img src="images/todo.png" alt="To-Do List Website Screenshot">
-                    <h3>To-Do List Website</h3>
-                    <p>A simple interactive to-do list to manage daily tasks.</p>
+                    <img src="images/todo.png" alt="To-Do List Screenshot">
+                    <h3>To-Do List</h3>
+                    <p>A simple interactive to-do list to manage tasks.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="Contact">
+        <!-- CONTACT SECTION -->
+        <section id="contact">
             <h2>Contact</h2>
-            <div>
-                <form id="contact-form">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" placeholder="eg: xyz@gmail.com" required>
+            <form id="contact-form-id">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required placeholder="Enter your name">
 
-                    <label for="message">Message:</label>
-                    <textarea id="message" placeholder="Enter your message here" required></textarea>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required placeholder="example@gmail.com">
 
-                    <button type="submit">Submit</button>
-                </form>
-                <div id="form-message"></div>
-            </div>
+                <label for="message">Message:</label>
+                <textarea id="message" required placeholder="Your message..."></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="form-message"></div>
         </section>
+
     </main>
 
-    <hr>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 All rights belong to Prasanti.</p>
+        <p>&copy; 2025 Prasanti Pathak. All rights reserved.</p>
     </footer>
 
-    <!-- JS -->
     <script src="script.js"></script>
 </body>
 </html>
