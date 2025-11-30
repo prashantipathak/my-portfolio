@@ -1,6 +1,6 @@
-// =======================
+
 // MOBILE MENU TOGGLE
-// =======================
+
 
 const menuButton = document.getElementById('menu-button');
 const navLinks = document.querySelector('.nav-links');
@@ -17,7 +17,7 @@ if (menuButton && navLinks) {
         menuButton.textContent = isExpanded ? '✕' : '☰';
     });
 
-    // Close menu when a link is clicked (mobile UX improvement)
+    
     navLinks.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             if (navLinks.classList.contains('open')) {
@@ -31,9 +31,9 @@ if (menuButton && navLinks) {
 
 
 
-// =======================
+
 // SCROLL PROGRESS BAR
-// =======================
+
 
 const scrollProgress = document.getElementById('scroll-progress');
 
@@ -49,11 +49,10 @@ if (scrollProgress) {
 
 
 
-// =======================
 // CONTACT FORM HANDLING
-// =======================
 
-const contactForm = document.getElementById('contact-form-id');  // FIXED ID
+
+const contactForm = document.getElementById('contact-form-id');  
 const messageDiv = document.getElementById('form-message');
 
 if (contactForm && messageDiv) {

@@ -66,13 +66,13 @@ body {
 /* --- Navigation links --- */
 .nav-links {
     list-style: none;
-    flex-direction: column; /* mobile default */
-    display: none;          /* hidden until JS opens it */
+    flex-direction: column; 
+    display: none;          
     gap: 20px;
 }
 
 .nav-links.open {
-    display: flex; /* shown when JS toggles */
+    display: flex; 
 }
 
 .nav-links li a {
@@ -85,7 +85,7 @@ body {
     padding: 5px 10px;
 }
 
-/* Underline animation on hover */
+
 .nav-links li a::after {
     content: '';
     position: absolute;
@@ -280,7 +280,7 @@ footer {
     }
 
     .nav-links {
-        display: flex; /* always visible on tablets+ */
+        display: flex; 
         flex-direction: row;
     }
 
